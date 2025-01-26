@@ -4,7 +4,7 @@ Gedik Üniversitesi Bilgisayar Programcılığı Bölümü Web Teknolojileri Der
 Ders kodu : CPP 101
 Tarih : 26.01.2025
 
-
+Gedik üniversitesi Blog sayfası altyapısı ve site hakkındaki bilgilerin geçişleri.2 tane html 2 tane css dosyası
 
 
 
