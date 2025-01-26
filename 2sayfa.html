@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Master Slide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header (Master Slide) -->
+<header>
+    <div class="logo">
+        <h1><a href="https://www.gedik.edu.tr/">Gedik Üniversitesi</a></h1>
+        <p>Yatay Geçiş Başvuru Sayfası</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="https://www.gedik.edu.tr/">Ana Sayfa</a></li>
+            <li><a href="https://www.gedik.edu.tr/ogrenciler/aday-ogrenciler/yatay-gecis">Yatay Geçiş</a></li>
+            <li><a href="https://www.gedik.edu.tr/ogrenciler/kayitli-ogrenciler/akademik-takvim">Akademik Takvim</a></li>
+            <li><a href="https://www.gedik.edu.tr/ogrenciler/aday-ogrenciler/burslar">Burslar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section>
+        <h2><a href="https://www.gedik.edu.tr/ogrenciler/aday-ogrenciler/yatay-gecis">Yatay Geçiş Başvuru Koşulları</a></h2>
+        <p>Yatay geçiş, bir üniversitenin öğrencilerinin, kendi bölümünde veya başka bir bölümde eğitim almak üzere başka bir üniversiteye geçiş yapması işlemidir. Gedik Üniversitesi, yatay geçiş başvurusu yapacak öğrencilere yönelik çeşitli imkanlar sunmaktadır.</p>
+        
+        <h3><a href="https://www.gedik.edu.tr/ogrenciler/aday-ogrenciler/yatay-gecis">Başvuru Koşulları</a></h3>
+        <ul>
+            <li>Başvurular yalnızca akademik takvimde belirtilen tarihlerde kabul edilmektedir.</li>
+            <li>Geçiş yapmak isteyen öğrencilerin belirli başarı kriterlerini karşılamaları gerekmektedir.</li>
+        </ul>
+    </section>
+</main>
+
+<!-- Footer (Master Slide) -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Gedik Üniversitesi | Tüm Hakları Saklıdır.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com/gedikedu" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com//gedikedu/" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Reklam Panosu</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<!-- Slaytlı Reklam Panosu -->
+<div class="reklam-panosu">
+    <div class="reklam-kartlari">
+        <div class="reklam-kart">
+            <a href="https://www.gedik.edu.tr/yatay-gecis-basladi/" target="_blank">
+                <img src="https://www.gedik.edu.tr/wp-content/uploads/yatay-gecis-basladi-banner-2025-ocak-scaled.jpg" alt="Reklam 1">
+                <p>Yatay-gecis-basladi</p>
+            </a>
+        </div>
+        <div class="reklam-kart">
+            <a href="https://www.gedik.edu.tr/ulusal-staj-2025-banneri/" target="_blank">
+                <img src="https://www.gedik.edu.tr/wp-content/uploads/ulusal-staj-2025-banneri-scaled.jpg" alt="Reklam 2">
+                <p>Ulusal</p>
+            </a>
+        </div>
+        <div class="reklam-kart">
+            <a href="https://www.gedik.edu.tr/ssp-banner-donem-bes/" target="_blank">
+                <img src="https://www.gedik.edu.tr/wp-content/uploads/ssp-banner-donem-bes-scaled.jpg" alt="Reklam 3">
+                <p>Donem</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sol ve Sağ Ok Tuşları -->
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+<script>
+// Slayt Gösterisi (Geçiş)
+let slideIndex = 0; // Başlangıç slaytı
+const reklamKartlari = document.querySelector('.reklam-kartlari'); // Slaytları tutan container
+
+function showSlides() {
+    slideIndex++;
+    if (slideIndex > 2) { // Slayt sayısına göre döngü yap
+        slideIndex = 0;
+    }
+    reklamKartlari.style.transform = `translateX(${-slideIndex * 100}%)`; // Slaytı sola kaydır
+}
+
+// Ok tuşlarıyla slayt değiştirme
+function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex > 2) { // Slayt sayısına göre döngü yap
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) { // Slayt sayısına göre döngü yap
+        slideIndex = 2;
+    }
+    reklamKartlari.style.transform = `translateX(${-slideIndex * 100}%)`; // Slaytı sola kaydır
+}
+
+// Her 3 saniyede bir slayt değişir
+setInterval(showSlides, 3000);
+</script>
+
+</body>
+</html>
+

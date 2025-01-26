@@ -1,0 +1,74 @@
+/* Reklam Panosu Genel Stil */
+.reklam-panosu {
+    width: 80%; /* Panonun genişliğini %80 yaparak daha küçük tutuyoruz */
+    margin: 0 auto; /* Ortalamak için */
+    overflow: hidden; /* İçeriğin dışarı taşmasını engeller */
+    position: relative; /* Ok simgelerinin doğru konumlanabilmesi için */
+}
+
+/* Reklam Kartları */
+.reklam-kartlari {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Her bir Reklam Kartı */
+.reklam-kart {
+    min-width: 100%; /* Her bir kartın genişliğini %100 yapıyoruz */
+    box-sizing: border-box; /* Padding ve border da dahil olmak üzere boyut hesaplanır */
+    text-align: center; /* Kart içeriğini ortala */
+    padding: 10px; /* Kartın içindeki öğelere boşluk ekle */
+}
+
+/* Resimler */
+.reklam-kart img {
+    width: 100%; /* Resmin genişliğini kartın genişliğine göre ayarla */
+    height: auto; /* Yüksekliği oranlı şekilde ayarla */
+    max-width: 100%; /* Resmin taşmasını engelle */
+}
+
+/* Yazı Stili */
+.reklam-kart p {
+    margin-top: 10px;
+    font-size: 18px; /* Yazı boyutunu biraz büyütüyoruz */
+    font-weight: bold; /* Yazıyı kalın yapıyoruz */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Yazıya gölge ekliyoruz */
+    color: #000000; /* Yazı rengini sarı yapıyoruz, bu daha dikkat çekici */
+    text-transform: uppercase; /* Yazıyı büyük harf yapıyoruz */
+    letter-spacing: 2px; /* Harf aralığını artırıyoruz */
+}
+
+/* Bağlantılar */
+.reklam-kart a {
+    display: block; /* Bağlantıyı tam boyut yap */
+    text-decoration: none; /* Bağlantı altını çizme */
+    color: inherit; /* Rengi koru */
+}
+
+/* Ok Tuşları Stil */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hover efektleri */
+}
