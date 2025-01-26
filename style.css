@@ -1,0 +1,134 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Başlık Alanı */
+header {
+    background-color: rgb(174, 0, 255);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Menü Listesi */
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(140, 0, 255);
+    text-align: center; /* Menü elemanlarını ortala */
+}
+
+li {
+    display: inline-block; /* Menü elemanlarını yatayda sıralar */
+}
+
+li a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Navigasyon Alanı */
+nav {
+    background-color: rgb(0, 255, 98);
+    width: 100px;
+    height: 300px;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    line-height: 30px;
+}
+
+/* İçerik Bölümü */
+section {
+    width: 490px;
+    padding: 25px;
+    float: left;
+    margin-left: 20px; /* Navigasyon alanı ile mesafe bırak */
+}
+
+/* Footer Alanı */
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    clear: both;
+    padding: 5px;
+    margin-top: 20px; /* Footer ile içerik arasına boşluk ekle */
+}
+
+/* Reklam Panosu Genel Stil */
+.reklam-panosu {
+    width: 80%; /* Panonun genişliğini %80 yaparak daha küçük tutuyoruz */
+    margin: 0 auto; /* Ortalamak için */
+    overflow: hidden; /* İçeriğin dışarı taşmasını engeller */
+    position: relative; /* Ok simgelerinin doğru konumlanabilmesi için */
+}
+
+/* Reklam Kartları */
+.reklam-kartlari {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Her bir Reklam Kartı */
+.reklam-kart {
+    min-width: 100%; /* Her bir kartın genişliğini %100 yapıyoruz */
+    box-sizing: border-box; /* Padding ve border da dahil olmak üzere boyut hesaplanır */
+    text-align: center; /* Kart içeriğini ortala */
+    padding: 10px; /* Kartın içindeki öğelere boşluk ekle */
+}
+
+.reklam-kart img {
+    width: 100%; /* Resmin genişliğini kartın genişliğine göre ayarla */
+    height: auto; /* Yüksekliği oranlı şekilde ayarla */
+    max-width: 100%; /* Resmin taşmasını engelle */
+}
+
+.reklam-kart p {
+    margin-top: 10px;
+    font-size: 16px; /* Yazı boyutunu biraz küçült */
+}
+
+/* Bağlantılar */
+.reklam-kart a {
+    display: block; /* Bağlantıyı tam boyut yap */
+    text-decoration: none; /* Bağlantı altını çizme */
+    color: inherit; /* Rengi koru */
+}
+
+/* Ok Tuşları Stil */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hover efektleri */
+}
+
